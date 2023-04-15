@@ -1,0 +1,23 @@
+logging:
+  file:
+    name: logs/bank-account.log
+  level:
+    org.springframework: WARN
+    com.lightdevops: DEBUG
+    sql: WARN
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: admin
+    password: admin
+  jpa:
+    properties:
+      hibernate:
+        default_schema: bank_account
+    hibernate:
+      ddl-auto: create-drop
+  sql:
+    init:
+      mode: always
+
